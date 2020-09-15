@@ -1,0 +1,143 @@
+@mixin ipad-screen{
+  @media screen and (min-width: 501px){
+    #header{
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      & .head-nav{
+        margin-right: 2rem;
+      }
+    }
+    #main-bg{
+      & .home-img{
+        height: 400px;
+      }
+    }  
+  }
+}
+@mixin ipadPro-screen{
+  @media screen and (min-width: 980px){
+    //home page
+    #header{
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      & .head-nav{
+        margin-right: 8rem;
+      }
+    }
+    #main-bg{
+      & .home-img{
+        height: 450px;
+      }
+    }
+    //about page
+    .basic-skill{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    //portfolio
+    #portfolio{
+      & .warp-2{
+        & .port-img{
+          width: 90%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          & .port-box{
+            width: 300px;
+            margin:20px;
+          }
+        }
+      }
+    }
+    //contact page
+    #contact{
+      & .warp-3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & .our-contact{
+          padding: 2rem;
+          width: 35%;
+          & h2{
+            margin-bottom: 3rem;
+          }
+        }
+        & .form-contact{
+          width: 80%;
+          padding: 2rem;
+            
+          & h4{
+            margin-bottom: 1rem;
+          }
+          & form{
+            width: 100%;
+            & input{
+              width: 300px;
+              margin: 0.5rem;
+            }
+            & textarea{
+              width: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin wide-screen{
+  @media only screen and (min-width: 1200px) {
+    #header{
+      margin: 0 auto;
+      & .head-nav{
+        margin-right: 20rem;
+      }
+    }
+    #main-bg{
+      position: relative;
+      overflow: hidden;
+      & .home-img{
+        height: 500px;
+      }
+      & .home-text{
+        background-color: rgba(0, 0, 0, 0);
+        max-width: 450px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(30%, -50%);
+      }
+    }
+    #portfolio{
+      max-width: 960px;
+      margin: 0 auto;
+      & .warp-2{
+        & .port-info{
+          max-width: 960px;
+        }
+        & .port-img{
+          max-width: 960px;
+        }
+      }
+    }
+    #contact{
+      & .warp-3{
+        & .our-contact{
+          max-width: 288px;
+        }
+        & .form-contact{
+          max-width: 672px;
+        }
+      }
+    }
+  }
+}
